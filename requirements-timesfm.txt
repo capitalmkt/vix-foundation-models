@@ -1,0 +1,27 @@
+# Environment for every script under src/univariate/10-12 and src/multivariate/07-09
+# (TimesFM 2.5 family).
+#
+# Install with:
+#   pip install -r requirements-timesfm.txt
+#
+# NOTE: the zero-shot scripts (univariate/10, multivariate/07) and the
+# fine-tuned/classification scripts (univariate/11-12, multivariate/08-09)
+# were originally installed in separate Colab cells with separate pip
+# commands. Pinning both timesfm and transformers here worked in the
+# original Colab runtime, but pip's resolver can still surface a conflict
+# on a different platform. If it does, split this file in two (one with
+# just timesfm[torch,xreg], one with just transformers+peft) and use two
+# virtual environments instead.
+
+timesfm[torch,xreg]==2.0.2
+transformers==5.3.0
+peft==0.18.1
+
+numpy
+pandas
+scipy
+statsmodels
+scikit-learn
+torch
+matplotlib
+ipython
